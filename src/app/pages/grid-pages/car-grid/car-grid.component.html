@@ -1,5 +1,12 @@
 <h3>{{gridName}}</h3>
-
+<p-dropdown
+  [options]="viewOptions"
+  (onChange)="onViewChange($event.value)"
+  optionLabel="label"
+  optionValue="value"
+  placeholder="Select a View"
+  styleClass="w-full sm:w-20rem">
+</p-dropdown>
 <ag-grid-angular
       style="width: 100%; height: 400px;"
       class="ag-theme-alpine"
